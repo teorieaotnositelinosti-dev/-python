@@ -99,7 +99,6 @@ if len(records) < 100:
 
 records.sort(key=lambda x: int(x['ID']))
 
-# Если это не заработает я повешусь на шнурках от кросовок
 with open('task3_sorted.csv', 'w', newline='', encoding='utf-8') as csvfile:
     fieldnames = ['ID', 'Name', 'Email', 'Date', 'URL']
     writer = csv.DictWriter(csvfile, fieldnames=fieldnames)
@@ -110,5 +109,5 @@ with open('task3_sorted.csv', 'w', newline='', encoding='utf-8') as csvfile:
 
 print(f"Создан файл task3_sorted.csv с {len(records)} записями")
 print("\nПримеры записей:")
-for i in range(min(10, len(records))):
-    print(f"{records[i]}")
+for record in records:
+    print(f"{record}")

@@ -22,11 +22,8 @@ with open(output_file, 'w', encoding='utf-8') as f:
         author = book['Автор']
         title = book['Название']
         
-        
-        try:
-            year = book['Дата поступления'].split(' ')[0].split('.')[2]
-        except:
-            year = "н.д."
+        year = book['Дата поступления'].split(' ')[0].split('.')[2]
+        # year = "н.д."
             
         
         ref_string = f"{i}. {author}. {title} - {year}\n"
